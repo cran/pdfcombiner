@@ -3,6 +3,9 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/stevechoy/pdfcombiner/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stevechoy/pdfcombiner/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/pdfcombiner)](https://CRAN.R-project.org/package=pdfcombiner)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/pdfcombiner)](https://cran.r-project.org/package=pdfcombiner)
+[![CRAN downloads total](https://cranlogs.r-pkg.org/badges/grand-total/pdfcombiner)](https://cran.r-project.org/package=pdfcombiner)
 <!-- badges: end -->
 
 ## Overview
@@ -26,29 +29,27 @@ PDF Combiner aims to fill a niche where R users with *restricted* permissions (i
 
 ## Installation
 
-You can install the latest development version from GitHub: 
+You can install `{pdfcombiner}` from CRAN: 
 
 ``` r
-## Install devtools first if required
-# install.packages(devtools)
+install.packages("pdfcombiner")
 
-devtools::install_github("stevechoy/pdfcombiner")
-
-## Pending CRAN submission
-# install.packages(pdfcombiner)
-
+## Alternatively, install the latest development version from GitHub:
+## Install pak first if required
+# install.packages("pak")
+# pak::pak("stevechoy/pdfcombiner")
 ```
 
 For advanced users, you may run PDF Combiner locally *without* installing it as a package (i.e. launch the App directly from R console), as long as you have the following packages:  
 
 ``` r
-install.packages(shiny)
-install.packages(pdftools)
+install.packages("shiny")
+install.packages("pdftools")
 
-# install.packages(staplr)   # Recommended, retains bookmarks (may need separate Java installation)
-# install.packages(magick)   # Recommended, allows image files to be uploaded
-# install.packages(officer)  # Optional, only used for PDF conversion to Word / Powerpoint
-# install.packages(openxlsx) # Optional, only used for PDF conversion to Excel
+# install.packages("staplr")   # Recommended, retains bookmarks (may need separate Java installation)
+# install.packages("magick")   # Recommended, allows image files to be uploaded
+# install.packages("officer")  # Optional, only used for PDF conversion to Word / Powerpoint
+# install.packages("openxlsx") # Optional, only used for PDF conversion to Excel
 
 shiny::runGitHub("stevechoy/pdfcombiner", subdir = "inst/shiny", launch.browser = TRUE)
 
